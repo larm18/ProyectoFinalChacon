@@ -1,0 +1,31 @@
+//
+   Created by lupita on 16/06/16.
+extends home
+block content
+    h1= title
+    div.container
+        form(name="add-task", method="post")
+            fieldset.form-group
+                label Name:
+                input(type="text", name="name")
+
+            fieldset.form-group
+                label Author:
+                input(type="text", name="author")
+
+            fieldset.form-group
+                label Description:
+                textarea(name="description")
+
+            fieldset.form-group
+                label Date:
+                input(type="date", name="date")
+
+            fieldset.form-group
+                label Priority:
+                input(type="text", name="priority")
+
+            fieldset.form-group
+                input.btn.btn-primary(type="submit", value="Add Task")
+
+
