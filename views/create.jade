@@ -4,7 +4,11 @@ extends home
 block content
     h1= title
     div.container
-        form(name="add-task", method="post")
+        form(name="add-task", method="post" action="create")
+            fieldset.form-group
+                label Key:
+                input(type="text", name="key")
+
             fieldset.form-group
                 label Name:
                 input(type="text", name="name")
