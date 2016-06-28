@@ -2,9 +2,9 @@ extends home
 block content
     h1= title
     div.container
-        button.btn-default(type="button"  name="pending") Pending
-        button.btn-default(type="button"  name="active") Active
-        button.btn-default(type="button"  name="done") Done
+        a.btn.btn-primary(href="/tasks/show/pending" role="button") Pending
+        a.btn.btn-primary(href="/tasks/show/active" role="button") Active
+        a.btn.btn-primary(href="/tasks/show/done" role="button") Done
 
 
 

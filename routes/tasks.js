@@ -19,8 +19,17 @@ router.get('/show', function(req, res, next) {
     res.render('show', { title: 'Show' });
 });
 
-router.get('display/:opcion', function(req, res, next) {
-    var op = req.params.opcion;
+router.get('/show/:task', function(req, res, next) {
+    //res.send(req.params.task );
+    var status = req.params.task;
+    data.showTasks( status ,function(err, result)
+    {
+       res.send({result:result});
+    });
+});
+
+router.get('/display/:op', function(req, res, next) {
+    var op = req.params.op;
 
     res.send(op);
 });
@@ -36,7 +45,7 @@ router.post('/create', function(req, res, next) {
 
     var task_values = {'name':name, 'author': author,'description': description, 'date':date, 'priority':priority};
 
-    data.createTask(key,task_values)
+    data.createTask(key,task_values,'active')
     res.render('create', { title: 'Create' });
 });
 
