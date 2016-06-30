@@ -15,17 +15,22 @@ router.get('/create', function(req, res, next) {
 });
 
 /*GET show page. */
+/*
 router.get('/show', function(req, res, next) {
     res.render('show', { title: 'Show' });
 });
+*/
 
 router.get('/show/:task', function(req, res, next) {
-    //res.send(req.params.task );
-    var status = req.params.task;
+    /*
+    res.send(req.params.task );
     data.showTasks( status ,function(err, result)
     {
        res.send({result:result});
     });
+    */
+    var status = req.params.task;
+    res.render('show', { title: 'Show' , status: status});
 });
 
 router.get('/display/:op', function(req, res, next) {
@@ -47,6 +52,15 @@ router.post('/create', function(req, res, next) {
 
     data.createTask(key,task_values,'active')
     res.render('create', { title: 'Create' });
+});
+
+router.get('/showtask/:task', function(req, res, next) {
+    //res.send(req.params.task );
+    var status = req.params.task;
+    data.showTasks( status ,function(err, result)
+    {
+        res.send(result);
+    });
 });
 
 module.exports = router;

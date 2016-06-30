@@ -1,13 +1,21 @@
 extends home
 block content
     h1= title
-    div.container
+    .container
         a.btn.btn-primary(href="/tasks/show/pending" role="button") Pending
         a.btn.btn-primary(href="/tasks/show/active" role="button") Active
         a.btn.btn-primary(href="/tasks/show/done" role="button") Done
+        br
+        br
+        .row
+            .col-sm-8
+                .panel.panel-default
+                    .panel-heading
+                        .panel-title Tasks
+                    #tasks.panel-body
 
-
-
-
-
-
+block scripts
+    script(src="https://code.jquery.com/jquery-3.0.0.min.js")
+    script.
+        var status = !{JSON.stringify(status)}
+    script(src="/javascripts/tasksDetails.js").

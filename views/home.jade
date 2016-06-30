@@ -7,6 +7,7 @@ html
         link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
         link(href='http://fonts.googleapis.com/css?family=Oswald', rel='stylesheet', type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Abel', rel='stylesheet', type='text/css')
+        block scripts
 
     body
         .container
@@ -19,7 +20,7 @@ html
                             li
                                 a(href="/tasks/create") Create
                             li
-                                a(href="/tasks/show") Show
+                                a(href="/tasks/show/active") Show
                             li
                                 a(href="/tasks/change") Change
         block content
