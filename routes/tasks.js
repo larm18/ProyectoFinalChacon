@@ -14,6 +14,7 @@ router.get('/create', function(req, res, next) {
     res.render('create', { title: 'Create' });
 });
 
+
 /*GET show page. */
 /*
 router.get('/show', function(req, res, next) {
@@ -39,6 +40,16 @@ router.get('/display/:op', function(req, res, next) {
     res.send(op);
 });
 
+router.get('/getTask/:op', function(req, res, next) {
+    var task = req.params.op;
+    data.getTask( task ,function(err, result)
+    {
+        console.log(result)
+        //res.send(result);
+        res.render('getTask', { title: 'Task Details', info:result});
+    });
+
+});
 
 router.post('/create', function(req, res, next) {
     var name = req.body.name;

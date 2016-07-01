@@ -12,10 +12,14 @@ var refresh_state = function(){
     $.get('/tasks/showtask/' + status)
         .done(function (data) {
             console.log(data);
-            $("#tasks").html(data.join(", "));
+            //$("#tasks").html(data.join(", "));
+            $("#tasks").html(function(){
+                $("#task").empty();
+            data.forEach(function (key) {
+                $("#tasks").append("<a href='../../tasks/getTask/"+ key + "'>" + key + "</a><br>")
+            })
         });
 
-}
+});
 
-var interval = 2000;
-setInterval(refresh_state, interval);
+}
