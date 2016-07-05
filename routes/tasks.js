@@ -45,8 +45,10 @@ router.get('/getTask/:op', function(req, res, next) {
     data.getTask( task ,function(err, result)
     {
         console.log(result)
+        result = JSON.parse(result);
         //res.send(result);
         res.render('getTask', { title: 'Task Details', info:result});
+
     });
 
 });

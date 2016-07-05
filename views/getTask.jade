@@ -1,4 +1,14 @@
 extends home
 block content
-#{info}
+    h1 Task Details
+    p Nombre: #{info["name"]}
+    br
+    p Autor: #{info["author"]}
+    br
+    p Descripcion: #{info["description"]}
+    br
+    p Fecha: #{info["date"]}
+    br
+    p Status: #{info["priority"]}
+
 
