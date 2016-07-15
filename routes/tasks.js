@@ -76,4 +76,17 @@ router.get('/showtask/:task', function(req, res, next) {
     });
 });
 
+
+router.get('/change/:status1/:status2/:key', function(req, res, next) {
+    //res.send(req.params.task );
+    var status1 = req.params.status1;
+    var status2 = req.params.status2;
+    var key = req.params.key;
+
+    //res.send(status1+ status2 +key)
+    data.changeTaskStatus(status1,status2,key)
+    res.render('show', { title: 'Show' , status: status1});
+});
+
+
 module.exports = router;

@@ -14,8 +14,10 @@ block content
                         .panel-title Tasks
                     #tasks.panel-body
 
+
 block scripts
     script(src="https://code.jquery.com/jquery-3.0.0.min.js")
     script.
         var status = !{JSON.stringify(status)}
+
     script(src="/javascripts/tasksDetails.js").

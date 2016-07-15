@@ -16,7 +16,15 @@ var refresh_state = function(){
             $("#tasks").html(function(){
                 $("#task").empty();
             data.forEach(function (key) {
-                $("#tasks").append("<a href='../../tasks/getTask/"+ key + "'>" + key + "</a><br>")
+                $("#tasks").append("<a href='../../tasks/getTask/"+ key + "'>" + key + "</a>")
+                if (status = 'Active') {
+
+                    status = 'active';
+
+
+                    $("#tasks").append("<a href='../../tasks/change/" + status + "/done/"+key+"'> Done</a>")
+                    $("#tasks").append("<a href='../../tasks/change/" + status + "/pending/"+key+"'> Pending</a></br>")
+                }
             })
         });
 
