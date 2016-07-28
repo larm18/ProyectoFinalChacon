@@ -14,6 +14,10 @@ router.get('/create', function(req, res, next) {
     res.render('create', { title: 'Create' });
 });
 
+/*Test Page.*/
+router.get('/test', function(req, res, next) {
+    res.render('test', { title: 'Test' });
+});
 
 /*GET show page. */
 /*
