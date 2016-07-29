@@ -2,7 +2,13 @@
    Created by lupita on 28/07/16.
 doctype html
 html
-    link(rel='stylesheet', type='text/css', href='../styles.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+    script(src="https://code.jquery.com/jquery-3.0.0.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="/javascripts/jquery.js" type="text/javascript")
+    script(src="/javascripts/common-scripts.js" type="text/javascript")
+    script(src="/javascripts/dcjqaccordion.2.7.js" type="text/javascript")
+    script(src="/javascripts/tasks.js" type="text/javascript")
     body
         // COMPLEX TO DO LIST
         .row.mt
@@ -85,5 +91,5 @@ html
                         .add-task-row
                             a.btn.btn-success.btn-sm.pull-left(href='todo_list.html#') Add New Tasks
                             a.btn.btn-default.btn-sm.pull-right(href='todo_list.html#') See All Tasks
-            // /col-md-12
-        // /row
+            col-md-12
+        row
