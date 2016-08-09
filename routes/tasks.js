@@ -19,7 +19,7 @@ router.get('/test', function(req, res, next) {
     res.render('test', { title: 'Test' });
 });
 
-/*GET show page. */
+/*GET show page. Last commit*/
 /*
 router.get('/show', function(req, res, next) {
     res.render('show', { title: 'Show' });
